@@ -1,2 +1,2 @@
-# KotlinPractice
-Apllication that consumes a lot of kotlin code examples.
+# KotlinEducation
+Application that consumes a lot of kotlin code examples.

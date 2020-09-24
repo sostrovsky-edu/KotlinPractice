@@ -13,7 +13,7 @@ import java.io.FileReader
 
 fun main() {
     val filePath = "/home/ss/HOME/EDUCATION/1_Computer_Disciplines/6_Programming/1_Languages/2_Kotlin/" +
-            "2_Code/KotlinPractice/src/syntax/functions/type/inline_func/example4/LazyFuncMain.kt"
+            "2_Code/KotlinEducation/src/syntax/functions/type/inline_func/example4/LazyFuncMain.kt"
     println("\nFirst line: ${readFirstLineFromFile(filePath)}")
 }
 
