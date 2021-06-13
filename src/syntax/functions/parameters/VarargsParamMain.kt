@@ -8,17 +8,17 @@ fun main(args: Array<String>) {
     val suffixStr = "End"
 
     // #1
-    multiPrint("a", "b", "c")
+    multiPrint("1. \na", "b", "c")
 
     // #2
-    multiPrint(prefixStr, "a", "b", "c")
+    multiPrint("2. \n$prefixStr", "a", "b", "c")
 
     // #3
-    multiPrint(prefixStr, "a", "b", "c", suffix = suffixStr)
+    multiPrint("3. \n$prefixStr", "a", "b", "c", suffix = suffixStr)
 
     // Spread operator
     val strings = arrayOf("a", "b", "c", "d", "e")
-    multiPrint(prefixStr, *strings, suffix = suffixStr)
+    multiPrint("4. \n$prefixStr", *strings, suffix = suffixStr)
 }
 
 // #1
@@ -28,7 +28,7 @@ fun main(args: Array<String>) {
 //}
 // #2
 // Functions can have regular parameters, and at most one parameter marked as "vararg":
-fun multiPrint(prefix: String, vararg strings: String): Unit {
+fun multiPrint(prefix: String, vararg strings: String) {
     println()
     println(prefix)
     for (string in strings)
