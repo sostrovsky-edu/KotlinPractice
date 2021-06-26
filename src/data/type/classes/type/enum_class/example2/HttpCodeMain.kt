@@ -4,10 +4,10 @@ import syntax.functions.type.infix_func.example2.HttpCode
 
 fun main(args: Array<String>) {
     println("Here are HTTP codes")
-    println("From Bad request to I'm a teapot")
-    /*for (code in BAD_REQUEST..I_AM_A_TEAPOT) {
-        println("$code")
-    }*/
+    println("From Bad request to I'm a teapot:")
+    enumValues<HttpCode>().forEach {
+        println("\tname: $it,\n\tcode: ${it.code}\n")
+    }
 }
 
 // #1
