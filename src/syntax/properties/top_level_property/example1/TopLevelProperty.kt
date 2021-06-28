@@ -1,4 +1,4 @@
-package syntax.properties.example4
+package syntax.properties.top_level_property.example1
 
 // #1
 var opCount = 0

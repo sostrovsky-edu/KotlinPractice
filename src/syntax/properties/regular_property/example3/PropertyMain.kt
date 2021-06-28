@@ -1,4 +1,4 @@
-package syntax.properties.example3
+package syntax.properties.regular_property.example3
 
 fun main(args: Array<String>) {
     val baseB = BaseB("BaseB:value")
