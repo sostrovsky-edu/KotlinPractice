@@ -1,11 +1,11 @@
-package syntax.properties.example1
+package syntax.properties.regular_property.example1
 
 import data.type.classes.type.enum_class.example1.SexEnum
 
 fun main(args: Array<String>) {
     val human1 = Human(12, SexEnum.Male)
     val human2 = Human(22, SexEnum.Female)
-    human2.isMarried = true;
+    human2.isMarried = true
 
     val humanList = listOf(human1, human2)
 
