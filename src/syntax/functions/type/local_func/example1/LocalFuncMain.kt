@@ -1,4 +1,4 @@
-package syntax.functions.type.local_func
+package syntax.functions.type.local_func.example1
 
 fun main(args: Array<String>) {
     val x = 10
