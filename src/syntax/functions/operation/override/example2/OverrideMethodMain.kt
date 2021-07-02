@@ -3,7 +3,7 @@ package syntax.functions.operation.override.example2
 import java.io.ByteArrayOutputStream
 import java.io.OutputStream
 
-fun main(args: Array<String>) {
+fun main() {
     val os = ByteArrayOutputStream()
     val pngImage = PNGImage()
     pngImage.save(os)

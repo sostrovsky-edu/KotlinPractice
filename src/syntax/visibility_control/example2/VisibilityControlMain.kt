@@ -2,25 +2,25 @@ package syntax.visibility_control.example2
 
 import java.lang.reflect.Modifier
 
-fun main(args: Array<String>) {
+fun main() {
     val derivedContainer = DerivedContainer()
     println("\nDerivedContainer.fieldA: ${derivedContainer.fieldA}")
     derivedContainer.printFieldA()
 
     // will not compile
+    // Error: Can not access "fieldA": It is protected in 'Container'
     /*val container: Container = derivedContainer
-    println("fieldA:${container.fieldA}")*/
+    println("fieldA:${container.fieldA}")
+    */
 
     println()
-    derivedContainer.javaClass.superclass.getDeclaredFields().forEach {
-        field->
+    derivedContainer.javaClass.superclass.getDeclaredFields().forEach { field->
         field.setAccessible(true)
 
         println("Field:${field.name}, ${Modifier.toString(field.modifiers)}, Value=${field.get(derivedContainer)}")
     }
 
-    derivedContainer.javaClass.getDeclaredFields().forEach {
-        field->
+    derivedContainer.javaClass.getDeclaredFields().forEach { field->
         field.setAccessible(true)
 
         println("Field:${field.name}, ${Modifier.toString(field.modifiers)}, Value=${field.get(derivedContainer)}")

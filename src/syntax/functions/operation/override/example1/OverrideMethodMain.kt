@@ -1,5 +1,10 @@
 package syntax.functions.operation.override.example1
 
+fun main() {
+    val singleEngineAirplane = CesnaAirplane()
+    singleEngineAirplane.fly()
+}
+
 abstract class SingleEngineAirplane protected constructor() {
     abstract fun fly()
 }
@@ -12,3 +17,6 @@ class CesnaAirplane : SingleEngineAirplane() {
         println("Flying a cesna")
     }
 }
+
+// наследовать нельзя, т.к. класс "CesnaAirplane" по-умолчанию final.
+// class Helicopter : CesnaAirplane { }
