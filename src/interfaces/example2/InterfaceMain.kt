@@ -1,10 +1,8 @@
 package interfaces.example2
 
 import java.util.logging.Logger
-import kotlin.test.assertEquals
-import kotlin.time.TestClock
 
-fun main(args: Array<String>) {
+fun main() {
     val human = Human()
     human.beforeExecute()
     human.execute()
@@ -16,7 +14,6 @@ class Human : LoggingExecutable {
         log.info("Executing: $this")
         return 0
     }
-
 }
 
 interface Executable {
