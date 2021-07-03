@@ -1,34 +1,25 @@
 package data.type.classes.type.nested_class.example2
 
-import java.lang.reflect.Executable
-import java.util.concurrent.Callable
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
-import java.util.concurrent.Future
+import java.io.Serializable
 
-class SqlRunner {
-    val pool : ExecutorService = Executors.newCachedThreadPool()
+fun main() {
+    val button = Button()
+    val state = button.getCurrentState()
+    button.restoreState(state)
+}
 
-    fun run(exec: Executable): Int {
-        return WorkItem(exec).call()
-    }
+interface State : Serializable
+interface View {
+    fun getCurrentState( ) : State
+    fun restoreState( state : State) { }
+}
 
-    fun runAsync(exec: Executable): Future<Int> {
-        return pool.submit(WorkItem(exec))
-    }
+class Button : View {
+    override fun getCurrentState( ) : State = ButtonState( )
+    override fun restoreState( state : State) { /* . . . */ }
 
-    open class WorkItem(val exec: Executable) : Callable<Int> {
-        override fun call(): Int {
-            // exec.beforeExecute()
-            // val res = exec.execute()
-            // exec.afterExecute()
-            // return res
-            return 0
-        }
-    }
-
-    // будет иметь ссылку на класс SqlRunner
-    inner class AsyncWorkItem(exec: Executable) : WorkItem(exec) {
-        fun submit(): Future<Int> = this@SqlRunner.pool.submit(this)
-    }
+    // Это аналог статического вложенного класса в Java
+    // В Kotlin вложенный класс без модификаторов это полный аналог статического вложенного класса в Java.
+    // Чтобы превратить его во внутренний класс со ссылкой на внешний класс, нужно добавить модификатор "inner".
+    class ButtonState : State { /* . . . */ }
 }
