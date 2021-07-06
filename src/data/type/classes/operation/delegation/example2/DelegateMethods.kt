@@ -4,7 +4,7 @@ package data.type.classes.operation.delegation.example2
 /*class FlexibleSet<T>(private val threshold: Int = 4): MutableSet<T> {
     private var innerSet: MutableSet<T> = COWArraySet<T>()
 
-    *//*override val size: Int
+    override val size: Int
         get() = innerSet.size
 
     override fun contains(element: T): Boolean =
@@ -55,7 +55,7 @@ data class MutableFileTree(
         private val data: MutableMap<String, MutableFileTree> = mutableMapOf(),
         var changed: Boolean = false): MutableMap<String, MutableFileTree> {
 
-    // Here will be a loot of delegation...
+    // Here will be a lot of delegation...
 }
 */
 

@@ -1,6 +1,6 @@
 package data.type.classes.operation.delegation.example3
 
-fun main(args: Array<String>) {
+fun main() {
     val panel = Panel(Rectangle(10,100,30,100))
     println("\nPanel:" +
             "\n\theight: " + panel.getHeight()+
