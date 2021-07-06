@@ -1,6 +1,6 @@
 package data.type.classes.type.singleton_class.example2
 
-fun main(args: Array<String>) {
+fun main() {
     val userData = UserData()
     userData.getFromDB(DBConnection)
 }

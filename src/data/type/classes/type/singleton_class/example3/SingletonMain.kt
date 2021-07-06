@@ -2,6 +2,24 @@ package data.type.classes.type.singleton_class.example3
 
 import interfaces.example2.LoggingExecutable
 
+fun main() {
+    val selectQuery = SelectQuery(
+            sqlDialect = "SQLite",
+            table = "USER",
+            fields = arrayOf("id", "name", "age", "sex")
+    )
+    println("1. Execute Result: ${selectQuery.execute()}\n")
+
+    val sqlConfig = SqlConfig("Oracle")
+    val sqlQuery = SqlQuery(sqlConfig)
+    println("2. SqlQuery config has caching: ${sqlQuery.config.hasCaching}\n")
+
+    sqlConfig.hasCaching = true
+    println("3. SqlQuery config has caching: ${sqlQuery.config.hasCaching}\n")
+
+    println("4. SqlConfig dialect is default: ${sqlConfig.dialect.isDefault}")
+}
+
 class SelectQuery(sqlDialect: String,
                   val table: String,
                   val fields: Array<String>): SqlQuery(), LoggingExecutable {
@@ -19,6 +37,12 @@ open class SqlQuery(val config: SqlConfig) {
     // #2
     constructor(): this(DefaultSqlConfig) {
         config.hasCaching = false
+    }
+}
+
+object DefaultSqlConfig: SqlConfig("") {
+    init {
+        hasCaching = false
     }
 }
 
@@ -48,8 +72,4 @@ class SqlDialect(val name: String) {
         get() = "" == name
 }
 
-object DefaultSqlConfig: SqlConfig("") {
-    init {
-        hasCaching = false
-    }
-}
+

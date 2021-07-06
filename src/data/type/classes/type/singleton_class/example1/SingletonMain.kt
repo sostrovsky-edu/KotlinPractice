@@ -1,5 +1,10 @@
 package data.type.classes.type.singleton_class.example1
 
+fun main() {
+    Singleton.doSomething()
+    Singleton.doSomething()
+}
+
 // Singleton class
 object Singleton {
     private var count = 0
