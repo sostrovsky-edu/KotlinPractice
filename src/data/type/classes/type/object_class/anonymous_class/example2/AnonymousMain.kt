@@ -1,7 +1,4 @@
-package data.type.classes.type.anonymous_class.example2
-
-import java.lang.reflect.Executable
-import java.util.concurrent.Callable
+package data.type.classes.type.object_class.anonymous_class.example2
 
 class SQLTests {
     /*
