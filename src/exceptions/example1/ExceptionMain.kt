@@ -1,8 +1,5 @@
 package exceptions.example1
 
-import data.type.classes.type.singleton_class.example3.SqlQuery
-import interfaces.example2.LoggingExecutable
-
 /*
 class SelectQuery() : SqlQuery(sqlDialect), LoggingExecutable {
     override fun execute(): Int {
