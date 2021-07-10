@@ -1,6 +1,6 @@
 package syntax.functions.type.lambda_func.example3
 
-fun main(args: Array<String>) {
+fun main() {
 
     // #1
     // return is not allowed in this lambda,
