@@ -1,6 +1,6 @@
 package syntax.functions.type.lambda_func.example4
 
-fun main(args: Array<String>) {
+fun main() {
     val list = listOf(1, 2, 3, 4, 5)
 
     print("1.")

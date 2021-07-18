@@ -1,6 +1,6 @@
 package data.type.classes.type.data_class.example4
 
-fun main(args: Array<String>) {
+fun main() {
     val persons = listOf(Person("Alice"),
                          Person("Bob", age = 29))
     val oldest = persons.maxBy { it.age ?: 0 }
