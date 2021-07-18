@@ -7,10 +7,10 @@ package syntax.functions.type.lambda_func.example7
  */
 fun main() {
     val responses = listOf("200 ОК", "418 I'm а teapot", "500 Internal Server Error")
-    printProЫemCounts(responses)
+    printProblemCounts(responses)
 }
 
-fun printProЫemCounts(responses: Collection<String>) {
+fun printProblemCounts(responses: Collection<String>) {
     var сlientErrors = 0
     var serverErrors = 0
 
