@@ -1,4 +1,4 @@
-package syntax.operators.type.elvis_operator
+package syntax.operators.type.elvis_operator.example1
 
 import syntax.functions.type.regular_func.example1.getFirstName
 import syntax.functions.type.regular_func.example1.getLastName

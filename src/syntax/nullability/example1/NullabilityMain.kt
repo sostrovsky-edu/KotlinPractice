@@ -1,4 +1,4 @@
-package syntax.nullability
+package syntax.nullability.example1
 
 fun main() {
     val nullString = null
